@@ -154,23 +154,23 @@ CAESDecrypt_Type = {
     "pylzma.AESDecrypt",                 /* char *tp_name; */
     sizeof(CAESDecryptObject),           /* int tp_basicsize; */
     0,                                   /* int tp_itemsize;       // not used much */
-    NULL,                                /* destructor tp_dealloc; */
-    (char *)NULL,                        /* printfunc  tp_print;   */
-    NULL,                                /* getattrfunc  tp_getattr; // __getattr__ */
-    NULL,                                /* setattrfunc  tp_setattr;  // __setattr__ */
-    NULL,                                /* cmpfunc  tp_compare;  // __cmp__ */
-    NULL,                                /* reprfunc  tp_repr;    // __repr__ */
-    NULL,                                /* PyNumberMethods *tp_as_number; */
-    NULL,                                /* PySequenceMethods *tp_as_sequence; */
-    NULL,                                /* PyMappingMethods *tp_as_mapping; */
-    NULL,                                /* hashfunc tp_hash;     // __hash__ */
-    NULL,                                /* ternaryfunc tp_call;  // __call__ */
-    NULL,                                /* reprfunc tp_str;      // __str__ */
+    (destructor)NULL,                    /* destructor tp_dealloc; */
+    0,                                   /* printfunc  tp_print;   // replaced NULL with 0 */
+    0,                                   /* getattrfunc  tp_getattr; // __getattr__ */
+    0,                                   /* setattrfunc  tp_setattr;  // __setattr__ */
+    0,                                   /* cmpfunc  tp_compare;  // __cmp__ */
+    0,                                   /* reprfunc  tp_repr;    // __repr__ */
+    0,                                   /* PyNumberMethods *tp_as_number; */
+    0,                                   /* PySequenceMethods *tp_as_sequence; */
+    0,                                   /* PyMappingMethods *tp_as_mapping; */
+    0,                                   /* hashfunc tp_hash;     // __hash__ */
+    0,                                   /* ternaryfunc tp_call;  // __call__ */
+    0,                                   /* reprfunc tp_str;      // __str__ */
     0,                                   /* tp_getattro*/
     0,                                   /* tp_setattro*/
     0,                                   /* tp_as_buffer*/
-    Py_TPFLAGS_DEFAULT,  /*tp_flags*/
-    "AES decryption class",                 /* tp_doc */
+    Py_TPFLAGS_DEFAULT,                  /* tp_flags */
+    "AES decryption class",              /* tp_doc */
     0,                                   /* tp_traverse */
     0,                                   /* tp_clear */
     0,                                   /* tp_richcompare */
