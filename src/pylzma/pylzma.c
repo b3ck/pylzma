@@ -589,7 +589,7 @@ initpylzma(void)
     pylzma_init_compfile();
 
 #if defined(WITH_THREAD)
-    PyEval_InitThreads();
+    //PyEval_InitThreads();
 
 #if !defined(PYLZMA_USE_GILSTATE)
     /* Save the current interpreter, so compressing file objects works. */
